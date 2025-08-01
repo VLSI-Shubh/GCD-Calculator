@@ -44,12 +44,11 @@ module gcd_tb ();
     #10 rst = 0;
 
     // Load first number (A)
-    #10 data_in = 143;
+    #10 data_in = 81;
     #10 start = 1;
-    #10 start = 0;
 
     // Set second number BEFORE controller goes to S1
-    #10 data_in = 72;
+    #10 data_in = 27;
 
     // Wait for done or timeout after 2000 clock cycles
     repeat (2000) @(posedge clk);
