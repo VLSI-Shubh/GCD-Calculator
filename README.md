@@ -85,7 +85,7 @@ Thus, I opted to go with the **FSM + Datapath design** and treat the behavioral 
 ![Controller Flow chart](https://github.com/VLSI-Shubh/GCD-Calculator/blob/dfcf05d9cfe588bd599af36a1a3003621496baa2/images/controller%20flow%20chart.jpeg)
 
 ### 🧭 FSM Controller
-
+[Flow chart] ![Controller Flow chart](https://github.com/VLSI-Shubh/GCD-Calculator/blob/dfcf05d9cfe588bd599af36a1a3003621496baa2/images/controller%20flow%20chart.jpeg)
 The FSM transitions through 6 states:
 
 | State | Function |
@@ -97,7 +97,7 @@ The FSM transitions through 6 states:
 | S4    | B > A: Subtract A from B |
 | S5    | Done — GCD ready |
 
-![Controller FSM state diagram](https://github.com/VLSI-Shubh/GCD-Calculator/blob/dfcf05d9cfe588bd599af36a1a3003621496baa2/images/controller%20FSM.jpeg)
+[FSM Diagram] ![Controller FSM state diagram](https://github.com/VLSI-Shubh/GCD-Calculator/blob/dfcf05d9cfe588bd599af36a1a3003621496baa2/images/controller%20FSM.jpeg)
 
 ### 🔧 Datapath Components
 ![Datapath Flowchart](https://github.com/VLSI-Shubh/GCD-Calculator/blob/dfcf05d9cfe588bd599af36a1a3003621496baa2/images/Datapath%20algorithm.jpeg)
@@ -164,3 +164,4 @@ Through this, I gained a deeper understanding of:
 ## 📝 License
 
 Open for educational and personal use under the [MIT License](https://github.com/VLSI-Shubh/GCD-Calculator/blob/0aed2b6cbe53a69f572582162a2f4a3701c9c94d/License.txt).
+
