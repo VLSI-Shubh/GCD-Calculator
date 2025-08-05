@@ -49,6 +49,7 @@ module gcd_tb ();
 
     // Set second number BEFORE controller goes to S1
     #10 data_in = 27;
+    // after this you can have either start =0 or keep it 1, if you  want to add new numbers then do again start = 1 and input other values
 
     // Wait for done or timeout after 2000 clock cycles
     repeat (2000) @(posedge clk);
@@ -69,4 +70,5 @@ end
         $monitor("Time=%0t | A_out=%d | B_out=%d | done=%b | state=%b", 
                  $time, dp1.A_out, dp1.B_out, done, ctlr1.ps);
     end
+
 endmodule
