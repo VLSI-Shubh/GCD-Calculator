@@ -155,6 +155,15 @@ GCD of the two numbers is: 4
 
 ---
 
+## 🛠️ Tools Used
+
+| Tool               | Purpose                                           |
+|--------------------|---------------------------------------------------|
+| **Icarus Verilog** | Compile/simulate Verilog code                    |
+| **GTKWave**        | View simulation waveform dumps (`.vcd` files)    |
+| **EDA Playground** | Online Verilog editor and schematic viewer       |
+
+---
 ## ✅ Conclusion
 
 This project demonstrates two distinct ways to compute GCD in Verilog — one focused on **hardware synthesis** and the other on **algorithmic clarity**:
@@ -171,5 +180,6 @@ Through this, I gained a deeper understanding of:
 ---
 
 ## 📝 License
+
 
 Open for educational and personal use under the [MIT License](https://github.com/VLSI-Shubh/GCD-Calculator/blob/0aed2b6cbe53a69f572582162a2f4a3701c9c94d/License.txt)
