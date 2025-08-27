@@ -136,7 +136,24 @@ GCD of the two numbers is: 4
 ![Modulus Output](https://github.com/VLSI-Shubh/GCD-Calculator/blob/dfcf05d9cfe588bd599af36a1a3003621496baa2/images/modulus%20output.gif)
 
 ---
+---
 
+## 🏗️ Synthesis Results
+
+The Controller + Datapath GCD design was synthesized successfully, confirming that the architecture is **fully hardware realizable**.
+
+### 📷 Synthesis Screenshot
+![Synthesis Screenshot](https://github.com/VLSI-Shubh/GCD-Calculator/blob/07a8d73211b95a545ba648e508c2d640e752e414/images/schematic.png)
+
+### 📄 Generated Netlist Schematic
+A detailed schematic was auto-generated during synthesis, showcasing how the datapath and FSM logic are mapped into gates and registers.
+
+🔗 [Download Schematic PDF](https://github.com/VLSI-Shubh/GCD-Calculator/blob/07a8d73211b95a545ba648e508c2d640e752e414/images/schematic.pdf)
+
+---
+
+
+---
 ## 📁 Project Files
 
 | File | Description |
@@ -183,3 +200,4 @@ Through this, I gained a deeper understanding of:
 
 
 Open for educational and personal use under the [MIT License](https://github.com/VLSI-Shubh/GCD-Calculator/blob/0aed2b6cbe53a69f572582162a2f4a3701c9c94d/License.txt)
+
