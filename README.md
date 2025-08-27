@@ -136,7 +136,6 @@ GCD of the two numbers is: 4
 ![Modulus Output](https://github.com/VLSI-Shubh/GCD-Calculator/blob/dfcf05d9cfe588bd599af36a1a3003621496baa2/images/modulus%20output.gif)
 
 ---
----
 
 ## 🏗️ Synthesis Results
 
@@ -152,8 +151,6 @@ A detailed schematic was auto-generated during synthesis, showcasing how the dat
 
 ---
 
-
----
 ## 📁 Project Files
 
 | File | Description |
@@ -200,4 +197,5 @@ Through this, I gained a deeper understanding of:
 
 
 Open for educational and personal use under the [MIT License](https://github.com/VLSI-Shubh/GCD-Calculator/blob/0aed2b6cbe53a69f572582162a2f4a3701c9c94d/License.txt)
+
 
