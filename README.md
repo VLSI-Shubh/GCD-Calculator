@@ -142,12 +142,20 @@ GCD of the two numbers is: 4
 The Controller + Datapath GCD design was synthesized successfully, confirming that the architecture is **fully hardware realizable**.
 
 ### 📷 Synthesis Screenshot
-![Synthesis Screenshot](https://github.com/VLSI-Shubh/GCD-Calculator/blob/07a8d73211b95a545ba648e508c2d640e752e414/images/schematic.png)
+Overview Schmatic
+![Overview Screenshot](https://github.com/VLSI-Shubh/GCD-Calculator/blob/07a8d73211b95a545ba648e508c2d640e752e414/images/schematic.png)
+
+Detailed Schmatic
+![Detailed Screenshot](https://github.com/VLSI-Shubh/GCD-Calculator/blob/fc09700f80e78a3ae687d7cd821960e498c3a367/images/schematic_1.png)
 
 ### 📄 Generated Netlist Schematic
-A detailed schematic was auto-generated during synthesis, showcasing how the datapath and FSM logic are mapped into gates and registers.
+A schematic was auto-generated during synthesis, showcasing how the datapath and FSM logic are mapped into gates and registers.
 
-🔗 [Download Schematic PDF](https://github.com/VLSI-Shubh/GCD-Calculator/blob/07a8d73211b95a545ba648e508c2d640e752e414/images/schematic.pdf)
+Overview Schmatic
+🔗 [Overview Schematic PDF](https://github.com/VLSI-Shubh/GCD-Calculator/blob/07a8d73211b95a545ba648e508c2d640e752e414/images/schematic.pdf)
+
+ Detailed Schmatic
+🔗 [Detailed Schematic PDF](https://github.com/VLSI-Shubh/GCD-Calculator/blob/fc09700f80e78a3ae687d7cd821960e498c3a367/images/schematic_1.pdf)
 
 ---
 
@@ -197,5 +205,6 @@ Through this, I gained a deeper understanding of:
 
 
 Open for educational and personal use under the [MIT License](https://github.com/VLSI-Shubh/GCD-Calculator/blob/0aed2b6cbe53a69f572582162a2f4a3701c9c94d/License.txt)
+
 
 
