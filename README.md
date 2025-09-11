@@ -58,6 +58,15 @@ This is the core of the project. It builds a **hardware-friendly GCD unit** by b
 
 This architecture mimics **how processors execute arithmetic through datapaths and control units**, making it an excellent exercise in **VLSI and digital system design**.
 
+### 💻 Approach 3: C Reference Model for GCD  
+
+Alongside the Verilog implementations, this project also includes a **C-based GCD calculator**.  
+This serves as a **golden reference model** for verifying correctness against a predefined test data file.  
+
+- ✅ Fast and portable — runs in software on any system  
+- ✅ Useful for validating the hardware RTL outputs  
+- 📂 Files: `GCD_using_C.c`, `gcd_test_data.txt`  
+
 ---
 
 ## 🔁 Why I Chose the FSM-Based Subtraction Approach
@@ -174,6 +183,9 @@ Overview Schematic
 | `GCD_while_tb.v`     | Testbench for `GCD_while` |
 | `images/`            | Waveform and output screenshots |
 | `*.vcd`              | Simulation waveform files |
+| `gcd.c`              | C reference model for GCD |
+| `gcd_test_data.txt`  | Test vectors for validating the C model |
+
 
 ---
 
@@ -205,6 +217,7 @@ Through this, I gained a deeper understanding of:
 
 
 Open for educational and personal use under the [MIT License](https://github.com/VLSI-Shubh/GCD-Calculator/blob/0aed2b6cbe53a69f572582162a2f4a3701c9c94d/License.txt)
+
 
 
 
