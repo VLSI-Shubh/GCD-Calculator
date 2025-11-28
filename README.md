@@ -2,8 +2,9 @@
 
 This project implements a **Greatest Common Divisor (GCD)** calculator in Verilog, showcasing **two different approaches** to solving the same mathematical problem. The project emphasizes **digital hardware design principles** by comparing:
 
-1. A **behavioral Verilog model** using `while` loop and modulus (`%`) operator  
-2. A **fully synthesizable FSM + Datapath architecture** using the subtraction-based Euclidean algorithm
+1. **Behavioral Verilog model** using a while loop and modulus (%) operator  
+2. **Fully synthesizable FSM and Datapath architecture** based on the subtraction-driven Euclidean algorithm  
+3. **C reference implementation** used as a software model for verification, testbench comparison, and generating test vectors  
 
 While both approaches are functionally correct, this project is primarily built around the **FSM + Datapath design**, which mirrors the internal workings of a CPU and is suitable for **actual hardware implementation**.
 
@@ -242,6 +243,7 @@ Through this, I gained a deeper understanding of:
 
 
 Open for educational and personal use under the [MIT License](https://github.com/VLSI-Shubh/GCD-Calculator/blob/0aed2b6cbe53a69f572582162a2f4a3701c9c94d/License.txt)
+
 
 
 
