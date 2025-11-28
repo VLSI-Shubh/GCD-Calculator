@@ -7,7 +7,6 @@ This project implements a **Greatest Common Divisor (GCD)** calculator in Verilo
 
 While both approaches are functionally correct, this project is primarily built around the **FSM + Datapath design**, which mirrors the internal workings of a CPU and is suitable for **actual hardware implementation**.
 
----
 
 ## Project Overview
 
@@ -15,11 +14,10 @@ The main learning goal of this project was to explore the **controller + datapat
 
 Additionally, an alternate Verilog implementation using a `while` loop and `%` modulus operator is included to compare both **hardware feasibility** and **performance considerations**.
 
----
 
-## ⚙️ Design Approaches
+## Design Approaches
 
-### 🔧 Approach 1: Behavioral Verilog using `while` + `%` (Simulation Only)
+### Approach 1: Behavioral Verilog using `while` + `%` (Simulation Only)
 
 This model follows the traditional GCD approach taught in programming courses — repeatedly applying modulus until one operand becomes zero.
 
@@ -40,7 +38,6 @@ gcd = (a == 0) ? b : a;
 
 This version is helpful for **early-stage functional validation**, but not suitable for synthesis or FPGA/ASIC design.
 
----
 
 ### Approach 2: FSM + Datapath using Subtraction (Synthesizable)
 
@@ -67,8 +64,6 @@ This serves as a **golden reference model** for verifying correctness against a 
 - Useful for validating the hardware RTL outputs  
 - Files: `GCD_using_C.c`, `gcd_test_data.txt`  
 
----
-
 ## Why I Chose the FSM-Based Subtraction Approach
 
 While both methods compute the GCD correctly, the final design was centered around the subtraction method for **hardware feasibility**:
@@ -87,7 +82,6 @@ Thus, I opted to go with the **FSM + Datapath design** and treated the behaviora
 
 ![Circuit Block Diagram](https://github.com/VLSI-Shubh/GCD-Calculator/blob/d8f045c2119be38e65745db2c3375080d7613f1c/images/Block%20diagram%20circuit.jpeg)
 
----
 
 ## Architecture Overview
 
@@ -110,7 +104,6 @@ The FSM transitions through 6 states:
 #### FSM State Diagram  
 ![FSM State Diagram](https://github.com/VLSI-Shubh/GCD-Calculator/blob/dfcf05d9cfe588bd599af36a1a3003621496baa2/images/controller%20FSM.jpeg)
 
----
 
 ### Datapath Components
 
@@ -127,9 +120,8 @@ The FSM transitions through 6 states:
 #### Datapath Circuit  
 ![Datapath Circuit](https://github.com/VLSI-Shubh/GCD-Calculator/blob/dfcf05d9cfe588bd599af36a1a3003621496baa2/images/datapath%20circuit.jpeg)
 
----
 
-## 🔬 Output Snapshots
+## Output Snapshots
 
 > Example terminal output for FSM + Datapath design (from testbench with inputs 4 and 24):
 
@@ -144,7 +136,6 @@ GCD of the two numbers is: 4
 ### Modulus-Based While Loop Output  
 ![Modulus Output](https://github.com/VLSI-Shubh/GCD-Calculator/blob/dfcf05d9cfe588bd599af36a1a3003621496baa2/images/modulus%20output.gif)
 
----
 
 ## Synthesis Results
 
@@ -166,7 +157,7 @@ Overview Schematic
  Detailed Schematic
 🔗 [Detailed Schematic PDF](https://github.com/VLSI-Shubh/GCD-Calculator/blob/fc09700f80e78a3ae687d7cd821960e498c3a367/images/schematic_1.pdf)
 
----
+
 
 ## Repository Structure
 ```
@@ -205,8 +196,6 @@ Overview Schematic
 
 ```
 
-
----
 ##  Project Files
 
 | File | Description |
@@ -226,7 +215,6 @@ Overview Schematic
 | `gcd_test_data.txt`  | Test vectors for validating the C model |
 
 
----
 
 ##  Tools Used
 
@@ -236,7 +224,7 @@ Overview Schematic
 | **GTKWave**        | View simulation waveform dumps (`.vcd` files)    |
 | **EDA Playground** | Online Verilog editor and schematic viewer       |
 
----
+
 ##  Conclusion
 
 This project demonstrates two distinct ways to compute GCD in Verilog — one focused on **hardware synthesis** and the other on **algorithmic clarity**:
@@ -250,12 +238,11 @@ Through this, I gained a deeper understanding of:
 - Hardware implementation vs behavioral modeling  
 - Trade-offs in algorithm selection based on speed and synthesizability
 
----
-
 ## License
 
 
 Open for educational and personal use under the [MIT License](https://github.com/VLSI-Shubh/GCD-Calculator/blob/0aed2b6cbe53a69f572582162a2f4a3701c9c94d/License.txt)
+
 
 
 
