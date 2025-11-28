@@ -1,4 +1,4 @@
-# 📐 GCD Calculator using FSM and Datapath Design
+# GCD Calculator using FSM and Datapath Design
 
 This project implements a **Greatest Common Divisor (GCD)** calculator in Verilog, showcasing **two different approaches** to solving the same mathematical problem. The project emphasizes **digital hardware design principles** by comparing:
 
@@ -9,7 +9,7 @@ While both approaches are functionally correct, this project is primarily built 
 
 ---
 
-## 🧠 Project Overview
+## Project Overview
 
 The main learning goal of this project was to explore the **controller + datapath design pattern**, which is foundational in modern CPU architecture. The FSM handles sequencing and logic control, while the datapath performs the arithmetic operations.
 
@@ -33,16 +33,16 @@ while (a != 0 && b != 0) {
 gcd = (a == 0) ? b : a;
 ```
 
-- ✅ Functional in simulation  
-- ❌ Not synthesizable  
-- ⚠️ Uses `%` operator and `while` loop, which do not map directly to logic gates  
-- 📂 Module: `GCD_while.v`, `GCD_while_tb.v`
+- Functional in simulation  
+- Not synthesizable  
+- Uses `%` operator and `while` loop, which do not map directly to logic gates  
+- Module: `GCD_while.v`, `GCD_while_tb.v`
 
 This version is helpful for **early-stage functional validation**, but not suitable for synthesis or FPGA/ASIC design.
 
 ---
 
-### ⚙️ Approach 2: FSM + Datapath using Subtraction (Synthesizable)
+### Approach 2: FSM + Datapath using Subtraction (Synthesizable)
 
 This is the core of the project. It builds a **hardware-friendly GCD unit** by breaking the design into:
 
@@ -58,28 +58,28 @@ This is the core of the project. It builds a **hardware-friendly GCD unit** by b
 
 This architecture mimics **how processors execute arithmetic through datapaths and control units**, making it an excellent exercise in **VLSI and digital system design**.
 
-### 💻 Approach 3: C Reference Model for GCD  
+### Approach 3: C Reference Model for GCD  
 
 Alongside the Verilog implementations, this project also includes a **C-based GCD calculator**.  
 This serves as a **golden reference model** for verifying correctness against a predefined test data file.  
 
-- ✅ Fast and portable — runs in software on any system  
-- ✅ Useful for validating the hardware RTL outputs  
-- 📂 Files: `GCD_using_C.c`, `gcd_test_data.txt`  
+- Fast and portable — runs in software on any system  
+- Useful for validating the hardware RTL outputs  
+- Files: `GCD_using_C.c`, `gcd_test_data.txt`  
 
 ---
 
-## 🔁 Why I Chose the FSM-Based Subtraction Approach
+## Why I Chose the FSM-Based Subtraction Approach
 
 While both methods compute the GCD correctly, the final design was centered around the subtraction method for **hardware feasibility**:
 
 | Feature | Subtraction Method | Modulus Method |
 |--------|--------------------|----------------|
-| Synthesizable | ✅ Yes | ❌ No |
+| Synthesizable | Yes | No |
 | Hardware Resource Cost | Low (simple subtractor) | High (requires division circuitry) |
 | Performance | Faster in hardware | Slower due to modulo complexity |
 | Suitability | Excellent for FSM control | Best for simulation only |
-| Final Choice | ✅ Chosen | ❌ Rejected for synthesis |
+| Final Choice | Chosen | Rejected for synthesis |
 
 In digital hardware, **modulus (`%`) is slower and resource-heavy** compared to subtraction. Since both approaches require repetitive operations until convergence, the **subtraction method is computationally more efficient in a circuit**. Subtraction is just an adder with inversion and carry-in, while modulus requires division hardware or iterative logic, making it costlier and slower.
 
@@ -89,11 +89,11 @@ Thus, I opted to go with the **FSM + Datapath design** and treated the behaviora
 
 ---
 
-## 🧩 Architecture Overview
+## Architecture Overview
 
-### 🧭 FSM Controller
+### FSM Controller
 
-#### 📉 Controller Flowchart  
+#### Controller Flowchart  
 ![Controller Flowchart](https://github.com/VLSI-Shubh/GCD-Calculator/blob/dfcf05d9cfe588bd599af36a1a3003621496baa2/images/controller%20flow%20chart.jpeg)
 
 The FSM transitions through 6 states:
@@ -107,14 +107,14 @@ The FSM transitions through 6 states:
 | S4    | B > A: Subtract A from B |
 | S5    | Done — GCD ready |
 
-#### 🔁 FSM State Diagram  
+#### FSM State Diagram  
 ![FSM State Diagram](https://github.com/VLSI-Shubh/GCD-Calculator/blob/dfcf05d9cfe588bd599af36a1a3003621496baa2/images/controller%20FSM.jpeg)
 
 ---
 
-### 🔧 Datapath Components
+### Datapath Components
 
-#### 📘 Datapath Flowchart  
+#### Datapath Flowchart  
 ![Datapath Flowchart](https://github.com/VLSI-Shubh/GCD-Calculator/blob/dfcf05d9cfe588bd599af36a1a3003621496baa2/images/Datapath%20algorithm.jpeg)
 
 | Component | Role |
@@ -124,7 +124,7 @@ The FSM transitions through 6 states:
 | `comparator.v` | Generates `Lt`, `Gt`, `Et` flags |
 | `mux_2x1.v` | Select paths for operand and result routing |
 
-#### 🧮 Datapath Circuit  
+#### Datapath Circuit  
 ![Datapath Circuit](https://github.com/VLSI-Shubh/GCD-Calculator/blob/dfcf05d9cfe588bd599af36a1a3003621496baa2/images/datapath%20circuit.jpeg)
 
 ---
@@ -138,26 +138,26 @@ GCD calculation completed
 GCD of the two numbers is: 4
 ```
 
-### 📷 Subtraction-Based FSM Model Output  
+### Subtraction-Based FSM Model Output  
 ![Subtraction Output](https://github.com/VLSI-Shubh/GCD-Calculator/blob/dfcf05d9cfe588bd599af36a1a3003621496baa2/images/substraction%20output.gif)
 
-### 🧮 Modulus-Based While Loop Output  
+### Modulus-Based While Loop Output  
 ![Modulus Output](https://github.com/VLSI-Shubh/GCD-Calculator/blob/dfcf05d9cfe588bd599af36a1a3003621496baa2/images/modulus%20output.gif)
 
 ---
 
-## 🏗️ Synthesis Results
+## Synthesis Results
 
 The Controller + Datapath GCD design was synthesized successfully, confirming that the architecture is **fully hardware realizable**.
 
-### 📷 Synthesis Screenshot
+### Synthesis Screenshot
 Overview Schematic
 ![Overview Screenshot](https://github.com/VLSI-Shubh/GCD-Calculator/blob/07a8d73211b95a545ba648e508c2d640e752e414/images/schematic.png)
 
 Detailed Schematic
 ![Detailed Screenshot](https://github.com/VLSI-Shubh/GCD-Calculator/blob/fc09700f80e78a3ae687d7cd821960e498c3a367/images/schematic_1.png)
 
-### 📄 Generated Netlist Schematic
+### Generated Netlist Schematic
 A schematic was auto-generated during synthesis, showcasing how the datapath and FSM logic are mapped into gates and registers.
 
 Overview Schematic
@@ -168,7 +168,46 @@ Overview Schematic
 
 ---
 
-## 📁 Project Files
+## Repository Structure
+```
+
+├── hdl/
+│   ├── rtl/
+│   │   ├── datapath.v
+│   │   ├── controller.v
+│   │   ├── pipo.v
+│   │   ├── subtractor.v
+│   │   ├── comparator.v
+│   │   ├── mux_2x1.v
+│   │   ├── GCD_while.v
+│   │
+│   ├── tb/
+│       ├── gcd_tb.v
+│       ├── GCD_while_tb.v
+│
+├── images/
+│   ├── block_diagram.jpeg
+│   ├── controller_flowchart.jpeg
+│   ├── fsm_diagram.jpeg
+│   ├── datapath_flow.jpeg
+│   ├── output_subtraction.gif
+│   ├── output_modulus.gif
+│   ├── schematic.png
+│   ├── schematic_1.png
+│
+├── GCD_Using_C/
+│   ├── GCD_using_C.c
+│   ├── gcd_test_data.txt
+│
+├── README.md
+├── LICENSE
+
+
+```
+
+
+---
+##  Project Files
 
 | File | Description |
 |------|-------------|
@@ -189,7 +228,7 @@ Overview Schematic
 
 ---
 
-## 🛠️ Tools Used
+##  Tools Used
 
 | Tool               | Purpose                                           |
 |--------------------|---------------------------------------------------|
@@ -198,7 +237,7 @@ Overview Schematic
 | **EDA Playground** | Online Verilog editor and schematic viewer       |
 
 ---
-## ✅ Conclusion
+##  Conclusion
 
 This project demonstrates two distinct ways to compute GCD in Verilog — one focused on **hardware synthesis** and the other on **algorithmic clarity**:
 
@@ -213,7 +252,7 @@ Through this, I gained a deeper understanding of:
 
 ---
 
-## 📝 License
+## License
 
 
 Open for educational and personal use under the [MIT License](https://github.com/VLSI-Shubh/GCD-Calculator/blob/0aed2b6cbe53a69f572582162a2f4a3701c9c94d/License.txt)
