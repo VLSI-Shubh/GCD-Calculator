@@ -1,6 +1,6 @@
 ![Datapath](https://img.shields.io/badge/Datapath-Completed-brightgreen)
 ![Controller](https://img.shields.io/badge/Controller-Completed-brightgreen)
-![Functional Verification](https://img.shields.io/badge/Functional%20Verification-Completed-brightgreen)
+![Functional Verification](https://img.shields.io/badge/Functional%20Verification-Passed-brightgreen)
 ![Synthesis](https://img.shields.io/badge/Synthesis-Completed-brightgreen)
 
 
@@ -249,6 +249,7 @@ Through this, I gained a deeper understanding of:
 
 
 Open for educational and personal use under the [MIT License](https://github.com/VLSI-Shubh/GCD-Calculator/blob/0aed2b6cbe53a69f572582162a2f4a3701c9c94d/License.txt)
+
 
 
 
