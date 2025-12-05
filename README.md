@@ -1,3 +1,9 @@
+![Datapath](https://img.shields.io/badge/Datapath-Completed-brightgreen)
+![Controller](https://img.shields.io/badge/Controller-Completed-brightgreen)
+![Functional Verification](https://img.shields.io/badge/Functional%20Verification-Completed-brightgreen)
+![Synthesis](https://img.shields.io/badge/Synthesis-Completed-brightgreen)
+
+
 # GCD Calculator using FSM and Datapath Design
 
 This project implements a **Greatest Common Divisor (GCD)** calculator in Verilog, showcasing **two different approaches** to solving the same mathematical problem. The project emphasizes **digital hardware design principles** by comparing:
